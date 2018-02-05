@@ -4,7 +4,9 @@ var colorPicker=$('#colorPicker').val();
 var inputHeight=$('#inputHeight').val();
 var inputWeight=$('#inputWeight').val();
 
-$('#submit').click(function(e){
+$('#submit').click(makeGrid);
+  
+  function makeGrid(e){
   $('#pixelCanvas tr').remove();
   var inputHeight=$('#inputHeight').val();
   var inputWeight=$('#inputWeight').val();
@@ -17,7 +19,7 @@ $('#submit').click(function(e){
   $(this).append("<td></td>");});
      }
   e.preventDefault();
-});
+}
 $('#pixelCanvas').on('mouseenter', 'td', function(){
   var colorPicker=$('#colorPicker').val();
   $(this).css('background', colorPicker);
